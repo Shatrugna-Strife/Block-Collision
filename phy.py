@@ -12,15 +12,3 @@ def snake_speed(block1_mass, block2_mass, u1, u2):
         velocity.append(v2)
         return velocity
 
-
-def list_append(list1):
-    list1.append(4)
-    return
-
-
-def v_change(r_fll):
-    return
-
-# new = [1, 2, 3, 4]
-# list_append(new)
-# print(new)
