@@ -82,12 +82,11 @@ while not game_exit:
                 clock_timer -= 2
             if event.key == pg.K_RIGHT:
                 clock_timer += 2
-
-
     if snake_pos_x <= 0 + border_size:
         sound_effect.play()
         speed_list = phy.snake_speed(snake_mass, 0, snake_velocity, 0)
         snake_velocity = speed_list[0]
+        # snake_pos_x = border_size - snake_pos_x
         collision += 1
     if snake_pos_x + snake_size >= fruit_pos_x or fruit_pos_x <= snake_pos_x + snake_size:
         sound_effect.play()
@@ -97,7 +96,6 @@ while not game_exit:
         # snake_pos_x = fruit_pos_x + snake_size - (snake_pos_x + snake_size - fruit_pos_x)
         collision += 1
 
-    
     snake_pos_x += snake_velocity
     fruit_pos_x += fruit_velocity
 
@@ -126,4 +124,3 @@ while not game_exit:
         # pg.draw.rect(display_game, violet, [fruit_pos_x, fruit_pos_y, fruit_size, fruit_size])
 
     pg.display.update()
-    print(collision)
